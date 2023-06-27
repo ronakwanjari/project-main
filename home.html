@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Wikipedia Applicaton</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
+     
+     <style>
+     .{
+     box-sizing:border-box;
+     }
+        
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar {
+      background-color: #333;
+      padding-bottom: 0px;
+      overflow: auto;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+       padding: 0;
+    
+    }
+    li{
+       display:inline;
+       float: left;
+    
+    }
+    a {
+      text-decoration: none;
+      
+     }
+    
+    .navbar a {
+      color: #fff;
+      display:inline;
+      padding: 10px;
+      width: 80px;
+      font-size: 18px;
+      text-align: center;
+      
+    }
+    .navbar-login{
+      padding-left: 1060px;
+      display: inline-table;
+    }
+    
+    .navbar a:hover {
+      background-color: #111;
+    }
+    .main-logo{
+        height: 100vh;
+        width: 100%;
+    }
+    .main-logo-centered{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-centered{
+      margin-bottom: 30px;
+      margin-top: 40px;
+
+
+    }
+    .search-bar{
+      width: 310px;
+      padding: 12px 10px;
+      background-color: #333;
+      border-radius: 10px; 
+      display: inline;
+      
+    }
+    .search-input{
+      background-color: transparent;
+      outline-width: 0;
+      color: #f0ecec;
+      width: 300px;
+      border: none;
+      font-size: 18px;  
+    }
+    .dropdown {
+    text-align: center;
+    padding: 20px;
+    }
+    section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: .8rem;
+    border-top: 1px solid rgba(0, 0, 0, .4);
+}
+.column:first-child {
+    width: 385px;
+    margin-right: 2rem;
+}
+.column:first-child .single-2:last-child {
+    background-color: rgba(51, 102, 204, .05);
+}
+.column:first-child .single-2:last-child h4 {
+    font-weight: 600;
+}
+.column:first-child .single-2:last-child p {
+    margin: .5rem 0;
+}
+.single-2 {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+.single-2:not(.column:first-child .single-2):hover {
+    background-color: rgba(51, 102, 204, .2);
+}
+.single-2:not(.column:first-child .single-2):active {
+    outline: 1px solid var(--blue-clr);
+}
+.single-2 h4 {
+    color: var(--blue-clr);
+    font-weight: 400;
+}
+.single-2 p {
+    color: rgba(0, 0, 0, .8);
+}
+.column {
+    flex: 1;
+}
+.column .img {
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+}
+.column .img img {
+    width: 40px;
+    height: 40px
+}
+.column .imgs img {
+    width: 125px;
+    height: 40px;
+}
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, .4);
+    text-align: center;
+    padding: 1rem 0;
+}
+footer p {
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .8);
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue-clr);
+}
+a:hover {
+    text-decoration: underline;
+}
+    
+
+    </style>
+
+</head>
+<body>
+    <div class="navbar"> 
+    <ul>
+    <li><a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i>Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-users" style="color: #ffffff;"></i>About us</a></li>
+    <li><a href="contact.html"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>Contact us</a></li>
+    <div class="navbar-login">
+    <li><a href="login.html">Log in</a></li>  
+    </div>
+    </ul>
+    </div>
+    <div class="main-logo-centered">
+      <div class="inner">
+           <div class="logo-centered">  
+               <img src="Wikipedia-logo-v2-en.svg.png" width="310" height="310" alt="Wikipedia">
+           </div>
+    
+      <div class="search-bar">
+       <input type="text" class="search-input" placeholder="Wikipedia search..." >
+       <button><a href="index.html"><i class="fa-solid fa-magnifying-glass" style="color: #000000;" ></i></a></button>
+       </div>
+       
+      </div>
+    </div>   
+
+     <div class="dropdown" style="color: #333;">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Read Wikipedia in your language
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Main_Page">English</a></li><br>
+        <li><a class="dropdown-item" href="https://mr.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">Marathi</a></li><br>
+        <li><a class="dropdown-item" href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">French</a></li><br>
+        <li><a class="dropdown-item" href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8">Japanese</a></li><br>
+      </ul>
+    </div>
+    
+
+    <section>
+      <div class="column">
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikimedia-foundation.jpg" alt="">
+              </div>
+              <div class="text">
+                  <p>Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects.</p>
+                  <a href="#">You can support our work with a donation.</a>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="W.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Download Wikipedia for Android or iOS</h4>
+                  <p>Save your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app.</p>
+                  <div class="imgs">
+                     <a href="https://apps.apple.com/us/app/wikipedia/id324715238"><img src="play-store.png" alt="" ></a>
+                      <a href="https://apps.apple.com/us/app/wikipedia/id324715238"><img src="app-store.png" alt=""></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="column">
+          <div class="single-2">
+              <div class="img">
+                  <img src="commons.svg" alt="">
+              </div>
+              <div class="text">
+                  <h4>Commons</h4>
+                  <p>Freely usable photos & more</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikibooks.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikibooks</h4>
+                  <p>Free textbooks</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikiversity.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikiversity</h4>
+                  <p>Free course materials</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikisource.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikisource</h4>
+                  <p>Free library</p>
+              </div>
+          </div>
+      </div>
+      
+      <div class="column">
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikivoyage.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikivoyage</h4>
+                  <p>Free travel guide</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikinews.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikinews</h4>
+                  <p>Free new source</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikiquote.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikiquote</h4>
+                  <p>Free quote compendium</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikispecies.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikispecies</h4>
+                  <p>Free species directory</p>
+              </div>
+          </div>
+      </div>
+      
+      <div class="column">
+          <div class="single-2">
+              <div class="img">
+                  <img src="wiktionary.jpg" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wiktionary</h4>
+                  <p>Free dictionary</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="wikidata.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Wikidata</h4>
+                  <p>Free knoledge base</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="mediawiki.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>MediaWiki</h4>
+                  <p>Free & open wiki application</p>
+              </div>
+          </div>
+          <div class="single-2">
+              <div class="img">
+                  <img src="meta-wiki.png" alt="">
+              </div>
+              <div class="text">
+                  <h4>Meta-Wiki</h4>
+                  <p>Community coordination & documentation</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <footer>
+      <p>
+          This page is available under the <a href="#"> Creative Commons Attribution-ShareAlike License</a> / <a href="#"> Terms of Use</a> / <a href="#"> Privacy Policy</a>
+      </p>
+  </footer>
+</body>
+</html>
+    
+
+      
+   </body>
+</html>
